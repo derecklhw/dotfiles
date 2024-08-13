@@ -2,28 +2,36 @@
 
 ## Install
 
-Copy the `.tmux.conf` file to your home directory.
+1. Install [tmux](https://github.com/tmux/tmux/wiki/Installing)
 
-```sh
-cp .tmux.conf ~
-```
+2. Copy the `.tmux.conf` file to your home directory.
 
-Install tpm (tmux plugin manager)
+    ```sh
+    cp .tmux.conf ~
+    ```
 
-```sh
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
+3. Install tpm (tmux plugin manager)
+
+    ```sh
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
 
 ## Run
 
-Start tmux
+1. Start tmux
 
-```sh
-tmux
-```
+    ```sh
+    tmux
+    ```
 
-Install plugins
+2. Install plugins
 
-```
-prefix + I
-```
+    ```sh
+    prefix + I
+    ```
+
+3. Update plugins
+
+    ```sh
+    prefix + U
+    ```
