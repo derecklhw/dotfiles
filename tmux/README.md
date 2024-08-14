@@ -30,8 +30,7 @@
     prefix + I
     ```
 
-3. Update plugins
+## Notes
 
-    ```sh
-    prefix + U
-    ```
+1. `prefix`: `Ctrl + b` by default.
+2. Some plugins may require additional dependencies. Check the plugin's GitHub page for more information.
