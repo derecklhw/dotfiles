@@ -33,4 +33,7 @@
 ## Notes
 
 1. `prefix`: `Ctrl + b` by default.
-2. Some plugins may require additional dependencies. Check the plugin's GitHub page for more information.
+2. Below plugins require additional dependencies. Check the plugin's GitHub page for more information and don't forget to run `prefix+I` again after you install the additional dependencies.
+   - tmux-yank
+   - tmux-fzf
+   - tmux-autoreload
