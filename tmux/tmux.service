@@ -1,0 +1,20 @@
+[Unit]
+Description=tmux default session (detached)
+Documentation=man:tmux(1)
+After=graphical-session.target
+
+[Service]
+Type=forking
+
+# Import relevant environment variables
+ExecStartPre=systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_SESSION_DESKTOP GPG_TTY XDG_CURRENT_DESKTOP
+ExecStart=/usr/bin/tmux new-session -d
+
+ExecStop=/home/$USER/.tmux/plugins/tmux-resurrect/scripts/save.sh
+ExecStop=/usr/bin/tmux kill-server
+KillMode=control-group
+
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
