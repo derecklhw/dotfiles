@@ -21,7 +21,13 @@
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     ```
 
-5. **IMPORTANT** If automatic start is enabled in a graphical session, systemd will encounter an error when attempting to start tmux. To resolve this, replace the existing systemd tmux service file (`~/.config/systemd/user/tmux.service`) with the version from this repository. Keep a backup of the original file by renaming it to `~/.config/systemd/user/tmux.service.backup`.
+5. **IMPORTANT:** The plugin `tmux-continuum` Automatic tmux start feature will cause an error to systemd in a graphical session. To resolve this, replace the existing systemd tmux service file with the version from this repository while keeping a backup of the original file.
+
+   ```sh
+   mv ~/.config/systemd/user/tmux.service ~/.config/systemd/user/tmux.service.backup
+   cp tmux.service ~/.config/systemd/user/
+   systemctl --user daemon-reload
+   ```
 
 ## Run
 
@@ -36,7 +42,4 @@
     ```sh
     prefix + I
     ```
-
-## Notes
-
-1. `prefix`: `Ctrl + b` by default.
+    Note: prefix is `Ctrl + b` by default.
