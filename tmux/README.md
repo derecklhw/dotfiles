@@ -27,6 +27,7 @@
    mv ~/.config/systemd/user/tmux.service ~/.config/systemd/user/tmux.service.backup
    cp tmux.service ~/.config/systemd/user/
    systemctl --user daemon-reload
+   systemctl --user enable tmux.service
    ```
 
 ## Run
